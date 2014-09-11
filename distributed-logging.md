@@ -1,7 +1,7 @@
 Logging in distributed systems
 ===============================
 
-The [microservices architecture](http://martinfowler.com/articles/microservices.html) is gaining traction, and many systems fan out into sets of applications distributed on multiple servers. If you don't keep your logging in check, it gets harder and more tedious to compile a full trace of what your systems behavior. In fact, one of the arguments against a distributed system is that it is harder to debug. I intend to show you that with a little effort spent on logging and infrastructure, we can bust that myth. Get ready to level up your logging game!
+The [microservices architecture](http://martinfowler.com/articles/microservices.html) is gaining traction, and many systems fan out into sets of applications distributed on multiple servers. If you don't keep your logging in check, it gets harder and more tedious to compile a full trace of your complete systems behavior. In fact, one of the arguments against a distributed system is that it is harder to debug. I intend to show you that with a little effort spent on logging and infrastructure, we can bust that myth. Get ready to level up your logging game!
 
 #### Starting grounds: The basics of logging
 Everything we will cover here assumes you already have a grip on standard application logging, with a basic setup. Your logs end up in files on disk. You use a standard logging framework like [slf4j](http://www.slf4j.org/) and [logback](http://logback.qos.ch/). You know [what to log](http://arctecgroup.net/pdf/howtoapplogging.pdf) and [how to log it](http://gojko.net/2006/12/09/logging-anti-patterns/). Timestamps, thread names and class names are a part of your logger pattern.
