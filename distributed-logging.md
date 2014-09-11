@@ -19,7 +19,7 @@ When debugging a complex issue in a multi-app environment, you need to be able t
  - Log a `traceId` throughout the call chain, to be able to quickly search across all applications for every log trace for a given user action.
  - Log a `spanId` in your request scope in every application, to be able to distinguish separate requests to the same app.
 
-These rules implies a couple of important aspects. Firstly, you have to propagate the `username`, `user-agent` and `traceId` whenever your control flow jumps from one application to the next. If your applications communicate using ´REST´ you can transmit these bits of information as HTTP header parameters.
+These rules implies a couple of important aspects. Firstly, you have to propagate the `username`, `user-agent` and `traceId` whenever your control flow jumps from one application to the next. If your applications communicate using REST you can transmit these bits of information as HTTP header parameters.
 The `traceId` and `spanId` can be a randomly generated short string or number. The `traceId` will be generated when you hit the first application, and just re-used in all cascading requests.
 A new `spanId` will be generated every time a request hits an application.
 To make sure every bit of metainformation is logged at every log-statement in your application, a good solution is to include it in your log pattern, fetching the values from [MDC](http://logback.qos.ch/manual/mdc.html).
